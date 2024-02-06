@@ -24,6 +24,6 @@ Possible values for status:
 - npm
 - jwt
 
+It uses the APIs mentioned in the [Keyhacks](https://github.com/streaak/keyhacks) repo.
 
-
-It uses the APIs mentioned in the [Keyhacks](https://github.com/streaak/keyhacks) repo. 
+Note: In case of any failures, It will return the validity as true for the token you are checking for. 
