@@ -2,7 +2,10 @@
 Veritas is a tool that validates the Credentials/Tokens.
 
 ## How to run
-``` python3 veritas.py```
+```
+pip3 install -r requirements.txt 
+python3 veritas.py
+```
 
 ## Sample Request
 ```
@@ -24,6 +27,6 @@ Possible values for status:
 - npm
 - jwt
 
+It uses the APIs mentioned in the [Keyhacks](https://github.com/streaak/keyhacks) repo.
 
-
-It uses the APIs mentioned in the [Keyhacks](https://github.com/streaak/keyhacks) repo. 
+Note: In case of any failures, It will return the validity as true for the token you are checking for. 
