@@ -34,6 +34,18 @@ def verifySlackWebhook(key):
         return True
     return False
 
+def verifyGithubToken(key):
+    try:
+        url = "https://api.github.com/user"
+        headers = {"authorization": "token {0}".format(key)}
+        res = requests.get(url, headers=headers)
+        if res.status_code == 200:
+            return True
+    except Exception as e:
+        print("Some error occured while checking the Github token")
+        return True
+    return False
+
 
 def verifyNPMToken(key):
     try:
@@ -172,6 +184,8 @@ def credentialVerifier():
         return {"status": str(verifyNPMToken(key))}
     elif tag is not None and key is not None and tag.lower() == 'jwt':
         return {"status": str(verifyJWTToken(key))}
+    elif tag is not None and key is not None and tag.lower() == 'github':
+        return {"status": str(verifyGithubToken(key))}
     else:
         return {"status": "unknown"}
 

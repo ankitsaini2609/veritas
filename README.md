@@ -26,6 +26,7 @@ Possible values for status:
 - google
 - npm
 - jwt
+- github
 
 It uses the APIs mentioned in the [Keyhacks](https://github.com/streaak/keyhacks) repo.
 
